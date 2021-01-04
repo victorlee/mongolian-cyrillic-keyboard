@@ -278,18 +278,11 @@ function up(event) {
 html {
   font-family:arial;
 }
-table {
-  border-collapse: collapse;
-  width: 70%;
-}
-td, th {
-  border: 1px solid #AAA;
-  text-align: center;
-  padding: 1px;
-}
+
+
 textarea {
     font-size: 1.4rem;
-    width: 98%;
+    width: 70%;
     font-family: Arial;
 } 
 .note {
@@ -324,39 +317,13 @@ border-radius: 5px;
 </center>
  <div class="message"></div>
 <center>
-<table>
-<thead>
-<tr>
-<th>
-<button onclick="copytext()">Copy text</button>
-<button onclick="bolor()">Bolor D.</button><br>
-<button onclick="searchglosbe()">Glosbe</button>
-<button onclick="searchwikt()">Wiktionary</button>
-<script>
-function bolor() {
-  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('textbox').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
-}
-function searchglosbe() {
-  window.open("http://glosbe.com/mn/en/" + document.getElementById('textbox').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
-}
-function searchwikt() {
-  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('textbox').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
-}
-</script>
-</th>
-</thead>
-<tbody>
-<tr>
-<td>
-<textarea rows="8"
+
+<textarea rows="11"
 onkeydown="down(event)"
 onkeypress="press(event)"
 onkeyup="up(event)"
 id="textbox"></textarea>    
-</td>
-</tr>
-</tbody>
-</table><br>
+<br><br>
 <div class="body" align="center" style="line-height: 2.4;">
 <span class="box" id="backtick">=⁺</span>
 <span class="box" id="one">№¹</span>
