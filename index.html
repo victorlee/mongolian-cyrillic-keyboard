@@ -168,15 +168,6 @@ function back(event) {
 } else {
   document.getElementById('back').style.backgroundColor = '#eee';
 }
-  var x = document.getElementById("demo");
-  if (event.shiftKey) {
-  document.getElementById('shift').style.backgroundColor = '#7ca';
-}
-}
-function isKeyUp(event) {
-  if (event.shiftKey){} else {
-  document.getElementById('shift').style.backgroundColor = '#eee';
-}
 }
 function hilight(event) {
   var x = event.which || event.keyCode;
@@ -501,7 +492,6 @@ placeholder="input"
 rows="10"
 oninput="onInputTextChange(this.value)"
 onkeydown="back(event)"
-onkeyup="isKeyUp(event)"
 onkeypress="hilight(event)"
 spellcheck="false"
 class="linked"></textarea>    
@@ -576,23 +566,6 @@ if (event.getModifierState("CapsLock")) {
   document.getElementById('caps').style.backgroundColor = '#eee';
 }
 });
-function isKeyPressed(event) {
-  var x = document.getElementById("demo");
-  if (event.shiftKey) {
-  document.getElementById('shift').style.backgroundColor = '#7ca';
-}
-  if (event.shiftKey) {
-  document.getElementById('shift2').style.backgroundColor = '#7ca';
-}
-}
-function isKeyUp(event) {
-  if (event.shiftKey){} else {
-  document.getElementById('shift').style.backgroundColor = '#eee';
-}
-  if (event.shiftKey){} else {
-  document.getElementById('shift2').style.backgroundColor = '#eee';
-}
-}
 </script>
 </body>
 </html>
