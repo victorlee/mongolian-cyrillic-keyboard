@@ -157,9 +157,14 @@ var conversion = {
 function back(event) {
   var x = event.which || event.keyCode;
   if( x == 8 ) {
-  document.getElementById('back').style.backgroundColor = '#88f';
+  document.getElementById('back').style.backgroundColor = '#7ca';
 } else {
   document.getElementById('back').style.backgroundColor = '#eee';
+}
+  if (x == 32 ) {
+  document.getElementById('space').style.backgroundColor = '#7ca';
+} else {
+  document.getElementById('space').style.backgroundColor = '#eee';
 }
 }
 function hilight(event) {
@@ -531,7 +536,8 @@ onkeypress="hilight(event)"></textarea>
 <span class="box" id="m">т</span>
 <span class="box" id="comma">ь</span>
 <span class="box" id="period">в</span>
-<span class="box" id="slash">ю</span>
+<span class="box" id="slash">ю</span><br>
+<span class="box" id="space" style="width: 200px;">​</span>
 </div>
 </center>
 
