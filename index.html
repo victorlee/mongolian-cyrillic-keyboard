@@ -393,6 +393,33 @@ if (x == 87 || x == 119) {
   document.getElementById('space').style.backgroundColor = '#eee';
 }
 }
+
+var scrollEnable = true;
+var add;
+function start() {
+  add = setInterval(function() {
+    var element = document.getElementById("output_textarea");
+    element.scrollTop = element.scrollHeight;
+  });
+}
+$('#offon').click(function() {
+  console.log(scrollEnable)
+  if (scrollEnable) {
+    clearInterval(add)
+  } else {
+    start();
+  }
+  scrollEnable = !scrollEnable;
+});
+start();
+function offon(){
+  currentvalue = document.getElementById('offon').value;
+  if(currentvalue == "scrollup ❎"){
+    document.getElementById("offon").value="scrollup ✅";
+  }else{
+    document.getElementById("offon").value="scrollup ❎";
+  }
+}
     </script>
     
 <style>
@@ -540,33 +567,5 @@ spellcheck="false"></textarea>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
 </center>
-<script>
-var scrollEnable = true;
-var add;
-function start() {
-  add = setInterval(function() {
-    var element = document.getElementById("output_textarea");
-    element.scrollTop = element.scrollHeight;
-  });
-}
-$('#offon').click(function() {
-  console.log(scrollEnable)
-  if (scrollEnable) {
-    clearInterval(add)
-  } else {
-    start();
-  }
-  scrollEnable = !scrollEnable;
-});
-start();
-function offon(){
-  currentvalue = document.getElementById('offon').value;
-  if(currentvalue == "scrollup ❎"){
-    document.getElementById("offon").value="scrollup ✅";
-  }else{
-    document.getElementById("offon").value="scrollup ❎";
-  }
-}
-</script>
 </body>
 </html>
