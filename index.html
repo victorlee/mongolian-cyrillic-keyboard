@@ -154,32 +154,11 @@ var conversion = {
           document.execCommand("copy");
         }
 
-var scrollEnable = true;
-var add;
-function start() {
-  add = setInterval(function() {
-    var element = document.getElementById("output_textarea");
-    element.scrollTop = element.scrollHeight;
-  });
-}
-$('#offon').click(function() {
-  console.log(scrollEnable)
-  if (scrollEnable) {
-    clearInterval(add)
-  } else {
-    start();
-  }
-  scrollEnable = !scrollEnable;
-});
-start();
-function offon(){
-  currentvalue = document.getElementById('offon').value;
-  if(currentvalue == "scrollup ❎"){
-    document.getElementById("offon").value="scrollup ✅";
-  }else{
-    document.getElementById("offon").value="scrollup ❎";
-  }
-}
+$(function(){
+    $('.linked').scroll(function(){
+        $('.linked').scrollTop($(this).scrollTop());    
+    })
+})
 
 function back(event) {
   var x = event.which || event.keyCode;
@@ -429,7 +408,7 @@ html {
 }
 table {
   border-collapse: collapse;
-  width: 70%;
+  width: 90%;
 }
 td, th {
   border: 1px solid #AAA;
@@ -475,16 +454,15 @@ border-radius: 5px;
 <table>
 <thead>
 <tr>
-<th style="width: 20%">
+<th style="width: 45%">
 <button onclick="select('input_textarea')">Select all</button>
 <button onclick="document.getElementById('input_textarea').value = ''">Clear</button>
 </th>
-<th>
+<th style="width: 45%">
 <button onclick="copytext()">Copy text</button>
-<button onclick="bolor()">Bolor D.</button>
+<button onclick="bolor()">Bolor D.</button><br>
 <button onclick="searchglosbe()">Glosbe</button>
-<button onclick="searchwikt()">Wiktionary</button><br>
-<input type="button" value="scrollup ❎" id="offon" onclick="offon();">
+<button onclick="searchwikt()">Wiktionary</button>
 <script>
 function bolor() {
   window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('output_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
@@ -509,10 +487,11 @@ rows="10"
 oninput="onInputTextChange(this.value)"
 onkeydown="back(event)"
 onkeypress="hilight(event)"
-spellcheck="false"></textarea>    
+spellcheck="false"
+class="linked"></textarea>    
 </td>
 <td>
-<textarea rows="10" placeholder="output" id="output_textarea"></textarea>    
+<textarea rows="10" placeholder="output" id="output_textarea" class="linked"></textarea>    
 </td>
 </tr>
 </tbody>
