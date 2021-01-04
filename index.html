@@ -156,16 +156,6 @@ var conversion = {
 
 function hilight(event) {
   var x = event.which || event.keyCode;
-  if( x == 8 ) {
-  document.getElementById('back').style.backgroundColor = '#7ca';
-} else {
-  document.getElementById('back').style.backgroundColor = '#eee';
-}
-  if (x == 32 ) {
-  document.getElementById('space').style.backgroundColor = '#7ca';
-} else {
-  document.getElementById('space').style.backgroundColor = '#eee';
-}
   if (x == 96 || x == 126 ) {
   document.getElementById('backtick').style.backgroundColor = '#f55';
 } else {
@@ -230,6 +220,11 @@ function hilight(event) {
   document.getElementById('equal').style.backgroundColor = '#f55';
 } else {
   document.getElementById('equal').style.backgroundColor = '#eee';
+}
+  if ( x == 8 ) {
+  document.getElementById('back').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('back').style.backgroundColor = '#eee';
 }
   if (x == 81 || x == 113) {
   document.getElementById('q').style.backgroundColor = '#f55';
@@ -389,6 +384,11 @@ if (x == 87 || x == 119) {
   document.getElementById('slash').style.backgroundColor = '#f55';
 } else {
   document.getElementById('slash').style.backgroundColor = '#eee';
+}
+  if (x == 32 ) {
+  document.getElementById('space').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('space').style.backgroundColor = '#eee';
 }
 }
     </script>
