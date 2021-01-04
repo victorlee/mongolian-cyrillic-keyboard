@@ -153,6 +153,34 @@ var conversion = {
           copyText.setSelectionRange(0, 99999)
           document.execCommand("copy");
         }
+
+var scrollEnable = true;
+var add;
+function start() {
+  add = setInterval(function() {
+    var element = document.getElementById("output_textarea");
+    element.scrollTop = element.scrollHeight;
+  });
+}
+$('#offon').click(function() {
+  console.log(scrollEnable)
+  if (scrollEnable) {
+    clearInterval(add)
+  } else {
+    start();
+  }
+  scrollEnable = !scrollEnable;
+});
+start();
+function offon(){
+  currentvalue = document.getElementById('offon').value;
+  if(currentvalue == "scrollup ❎"){
+    document.getElementById("offon").value="scrollup ✅";
+  }else{
+    document.getElementById("offon").value="scrollup ❎";
+  }
+}
+
 function back(event) {
   var x = event.which || event.keyCode;
   if ( x == 8 ) {
@@ -392,33 +420,6 @@ if (x == 87 || x == 119) {
 } else {
   document.getElementById('space').style.backgroundColor = '#eee';
 }
-}
-
-var scrollEnable = true;
-var add;
-function start() {
-  add = setInterval(function() {
-    var element = document.getElementById("output_textarea");
-    element.scrollTop = element.scrollHeight;
-  });
-}
-$('#offon').click(function() {
-  console.log(scrollEnable)
-  if (scrollEnable) {
-    clearInterval(add)
-  } else {
-    start();
-  }
-  scrollEnable = !scrollEnable;
-});
-start();
-function offon(){
-  currentvalue = document.getElementById('offon').value;
-  if(currentvalue == "scrollup ❎"){
-    document.getElementById("offon").value="scrollup ✅";
-  }else{
-    document.getElementById("offon").value="scrollup ❎";
-  }
 }
     </script>
     
