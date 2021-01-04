@@ -401,7 +401,7 @@ html {
 }
 table {
   border-collapse: collapse;
-  width: 90%;
+  width: 70%;
 }
 td, th {
   border: 1px solid #AAA;
@@ -409,7 +409,7 @@ td, th {
   padding: 1px;
 }
 textarea {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 96%;
 } 
 .note {
@@ -447,15 +447,16 @@ border-radius: 5px;
 <table>
 <thead>
 <tr>
-<th>	
+<th style="width: 20%">
 <button onclick="select('input_textarea')">Select all</button>
 <button onclick="document.getElementById('input_textarea').value = ''">Clear</button>
 </th>
 <th>
 <button onclick="copytext()">Copy text</button>
-<button onclick="bolor()">Bolor D.</button><br>
+<button onclick="bolor()">Bolor D.</button>
 <button onclick="searchglosbe()">Glosbe</button>
-<button onclick="searchwikt()">Wiktionary</button>
+<button onclick="searchwikt()">Wiktionary</button><br>
+<input type="button" value="scrollup ❎" id="offon" onclick="offon();">
 <script>
 function bolor() {
   window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('output_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
@@ -539,6 +540,33 @@ spellcheck="false"></textarea>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
 </center>
-
+<script>
+var scrollEnable = true;
+var add;
+function start() {
+  add = setInterval(function() {
+    var element = document.getElementById("output_textarea");
+    element.scrollTop = element.scrollHeight;
+  });
+}
+$('#offon').click(function() {
+  console.log(scrollEnable)
+  if (scrollEnable) {
+    clearInterval(add)
+  } else {
+    start();
+  }
+  scrollEnable = !scrollEnable;
+});
+start();
+function offon(){
+  currentvalue = document.getElementById('offon').value;
+  if(currentvalue == "scrollup ❎"){
+    document.getElementById("offon").value="scrollup ✅";
+  }else{
+    document.getElementById("offon").value="scrollup ❎";
+  }
+}
+</script>
 </body>
 </html>
