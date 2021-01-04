@@ -159,7 +159,7 @@ $(function(){
     })
 })
 
-function back(event) {
+function down(event) {
   var x = event.which || event.keyCode;
   if ( x == 8 ) {
   document.getElementById('back').style.backgroundColor = '#7ca';
@@ -174,7 +174,7 @@ function back(event) {
   document.getElementById('shift2').style.backgroundColor = '#7ca';
 }
 }
-function hilight(event) {
+function press(event) {
   var x = event.which || event.keyCode;
   if (x == 96 || x == 126 ) {
   document.getElementById('backtick').style.backgroundColor = '#f55';
@@ -411,6 +411,14 @@ if (x == 87 || x == 119) {
   document.getElementById('space').style.backgroundColor = '#eee';
 }
 }
+function up(event) {
+  if (event.shiftKey){} else {
+  document.getElementById('shift').style.backgroundColor = '#eee';
+}
+  if (event.shiftKey){} else {
+  document.getElementById('shift2').style.backgroundColor = '#eee';
+}
+}
     </script>
     
 <style>
@@ -496,9 +504,9 @@ autofocus=""
 placeholder="input"
 rows="10"
 oninput="onInputTextChange(this.value)"
-onkeydown="back(event)"
-onkeypress="hilight(event)"
-onkeyup="isKeyUp(event)"
+onkeydown="down(event)"
+onkeypress="press(event)"
+onkeyup="up(event)"
 spellcheck="false"
 class="linked"
 ></textarea>    
@@ -573,14 +581,6 @@ if (event.getModifierState("CapsLock")) {
   document.getElementById('caps').style.backgroundColor = '#eee';
 }
 });
-function isKeyUp(event) {
-  if (event.shiftKey){} else {
-  document.getElementById('shift').style.backgroundColor = '#eee';
-}
-  if (event.shiftKey){} else {
-  document.getElementById('shift2').style.backgroundColor = '#eee';
-}
-}
 </script>
 </body>
 </html>
