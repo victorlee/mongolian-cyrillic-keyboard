@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -166,6 +167,15 @@ function back(event) {
   document.getElementById('back').style.backgroundColor = '#7ca';
 } else {
   document.getElementById('back').style.backgroundColor = '#eee';
+}
+  var x = document.getElementById("demo");
+  if (event.shiftKey) {
+  document.getElementById('shift').style.backgroundColor = '#7ca';
+}
+}
+function isKeyUp(event) {
+  if (event.shiftKey){} else {
+  document.getElementById('shift').style.backgroundColor = '#eee';
 }
 }
 function hilight(event) {
@@ -491,6 +501,7 @@ placeholder="input"
 rows="10"
 oninput="onInputTextChange(this.value)"
 onkeydown="back(event)"
+onkeyup="isKeyUp(event)"
 onkeypress="hilight(event)"
 spellcheck="false"
 class="linked"></textarea>    
@@ -513,44 +524,46 @@ class="linked"></textarea>
 <span class="box" id="eight">,⁸</span>
 <span class="box" id="nine">%⁹</span>
 <span class="box" id="zero">?⁰</span>
-<span class="box" id="hypen">е</span>
-<span class="box" id="equal">щ</span>
+<span class="box" id="hypen">Е</span>
+<span class="box" id="equal">Щ</span>
 <span class="box" id="back" style="width: 80px;">Back</span><br>
-<span class="box" id="q">ф</span>
-<span class="box" id="w">ц</span>
-<span class="box" id="e">у</span>
-<span class="box" id="r">ж</span>
-<span class="box" id="t">э</span>
-<span class="box" id="y">н</span>
-<span class="box" id="u">г</span>
-<span class="box" id="i">ш</span>
-<span class="box" id="o">ү</span>
-<span class="box" id="p">з</span>
-<span class="box" id="lb">к</span>
-<span class="box" id="rb">ъ</span><br>
+<span class="box" id="q">Ф</span>
+<span class="box" id="w">Ц</span>
+<span class="box" id="e">У</span>
+<span class="box" id="r">Ж</span>
+<span class="box" id="t">Э</span>
+<span class="box" id="y">Н</span>
+<span class="box" id="u">Г</span>
+<span class="box" id="i">Ш</span>
+<span class="box" id="o">Ү</span>
+<span class="box" id="p">З</span>
+<span class="box" id="lb">К</span>
+<span class="box" id="rb">Ъ</span><br>
 <span class="box" id="caps" style="width: 80px;">Caps</span>
-<span class="box" id="a">й</span>
-<span class="box" id="s">ы</span>
-<span class="box" id="d">б</span>
-<span class="box" id="f" style="background-color:#bbb;">ө</span>
-<span class="box" id="g">а</span>
-<span class="box" id="h">х</span>
-<span class="box" id="j" style="background-color:#bbb;">р</span>
-<span class="box" id="k">о</span>
-<span class="box" id="l">л</span>
-<span class="box" id="semicolon">д</span>
-<span class="box" id="apostrophe">п</span>
+<span class="box" id="a">Й</span>
+<span class="box" id="s">Ы</span>
+<span class="box" id="d">Б</span>
+<span class="box" id="f" style="background-color:#bbb;">Ө</span>
+<span class="box" id="g">А</span>
+<span class="box" id="h">Х</span>
+<span class="box" id="j" style="background-color:#bbb;">Р</span>
+<span class="box" id="k">О</span>
+<span class="box" id="l">Л</span>
+<span class="box" id="semicolon">Д</span>
+<span class="box" id="apostrophe">П</span>
 <span class="box" id="enter" style="width: 80px;">Enter</span><br>
-<span class="box" id="z">я</span>
-<span class="box" id="x">ч</span>
-<span class="box" id="c">ё</span>
-<span class="box" id="v">с</span>
-<span class="box" id="b">м</span>
-<span class="box" id="n">и</span>
-<span class="box" id="m">т</span>
-<span class="box" id="comma">ь</span>
-<span class="box" id="period">в</span>
-<span class="box" id="slash">ю</span><br>
+<span class="box" id="shift" style="width: 105px;">Shift</span>
+<span class="box" id="z">Я</span>
+<span class="box" id="x">Ч</span>
+<span class="box" id="c">Ё</span>
+<span class="box" id="v">С</span>
+<span class="box" id="b">М</span>
+<span class="box" id="n">И</span>
+<span class="box" id="m">Т</span>
+<span class="box" id="comma">Ь</span>
+<span class="box" id="period">В</span>
+<span class="box" id="slash">Ю</span>
+<span class="box" id="shift2" style="width: 105px;">Shift</span><br>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
 </center>
@@ -563,6 +576,23 @@ if (event.getModifierState("CapsLock")) {
   document.getElementById('caps').style.backgroundColor = '#eee';
 }
 });
+function isKeyPressed(event) {
+  var x = document.getElementById("demo");
+  if (event.shiftKey) {
+  document.getElementById('shift').style.backgroundColor = '#7ca';
+}
+  if (event.shiftKey) {
+  document.getElementById('shift2').style.backgroundColor = '#7ca';
+}
+}
+function isKeyUp(event) {
+  if (event.shiftKey){} else {
+  document.getElementById('shift').style.backgroundColor = '#eee';
+}
+  if (event.shiftKey){} else {
+  document.getElementById('shift2').style.backgroundColor = '#eee';
+}
+}
 </script>
 </body>
 </html>
