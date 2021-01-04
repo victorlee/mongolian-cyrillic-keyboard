@@ -154,7 +154,7 @@ var conversion = {
           document.execCommand("copy");
         }
 
-function back(event) {
+function hilight(event) {
   var x = event.which || event.keyCode;
   if( x == 8 ) {
   document.getElementById('back').style.backgroundColor = '#7ca';
@@ -166,9 +166,6 @@ function back(event) {
 } else {
   document.getElementById('space').style.backgroundColor = '#eee';
 }
-}
-function hilight(event) {
-  var x = event.which || event.keyCode;
   if (x == 96 || x == 126 ) {
   document.getElementById('backtick').style.backgroundColor = '#f55';
 } else {
@@ -480,8 +477,7 @@ autofocus=""
 placeholder="input"
 rows="10"
 oninput="onInputTextChange(this.value)"
-onkeydown="back(event)"
-onkeypress="hilight(event)"></textarea>    
+onkeydown="hilight(event)"></textarea>    
 </td>
 <td>
 <textarea rows="10" placeholder="output" id="output_textarea"></textarea>    
