@@ -346,6 +346,11 @@ if (x == 87 || x == 119) {
 } else {
   document.getElementById('apostrophe').style.backgroundColor = '#eee';
 }
+  if (x == 13 ) {
+  document.getElementById('enter').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('enter').style.backgroundColor = '#eee';
+}
   if (x == 122 || x == 90 ) {
   document.getElementById('z').style.backgroundColor = '#f55';
 } else {
@@ -449,7 +454,7 @@ border-radius: 5px;
 
 <center><h1 class="text-center">Mongolian Cyrillic typer</h1>
 </center>
- 
+ <div class="message"></div>
 <center>
 <table>
 <thead>
@@ -523,6 +528,7 @@ class="linked"></textarea>
 <span class="box" id="p">з</span>
 <span class="box" id="lb">к</span>
 <span class="box" id="rb">ъ</span><br>
+<span class="box" id="caps" style="width: 80px;">Caps</span>
 <span class="box" id="a">й</span>
 <span class="box" id="s">ы</span>
 <span class="box" id="d">б</span>
@@ -533,7 +539,8 @@ class="linked"></textarea>
 <span class="box" id="k">о</span>
 <span class="box" id="l">л</span>
 <span class="box" id="semicolon">д</span>
-<span class="box" id="apostrophe">п</span><br>
+<span class="box" id="apostrophe">п</span>
+<span class="box" id="enter" style="width: 80px;">Enter</span><br>
 <span class="box" id="z">я</span>
 <span class="box" id="x">ч</span>
 <span class="box" id="c">ё</span>
@@ -547,5 +554,15 @@ class="linked"></textarea>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
 </center>
+<script>
+var input = document.getElementById("input_textarea");
+input.addEventListener("keyup", function(event) {
+if (event.getModifierState("CapsLock")) {
+  document.getElementById('caps').style.backgroundColor = '#7ca';
+} else {
+  document.getElementById('caps').style.backgroundColor = '#eee';
+}
+});
+</script>
 </body>
 </html>
