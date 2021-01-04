@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mongolian Cyrillic keyboard</title>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+function copytext() {
+  var copyText = document.getElementById("textbox");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+}
+
+function down(event) {
+  var x = event.which || event.keyCode;
+  if ( x == 8 ) {
+  document.getElementById('back').style.backgroundColor = '#7ca';
+} else {
+  document.getElementById('back').style.backgroundColor = '#eee';
+}
+  var x = document.getElementById("demo");
+  if (event.shiftKey) {
+  document.getElementById('shift').style.backgroundColor = '#7ca';
+}
+  if (event.shiftKey) {
+  document.getElementById('shift2').style.backgroundColor = '#7ca';
+}
+}
+function press(event) {
+  var x = event.which || event.keyCode;
+  if (x == 61 || x == 43 ) {
+  document.getElementById('backtick').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('backtick').style.backgroundColor = '#eee';
+}
+  if (x == 49 || x == 8470 ) {
+  document.getElementById('one').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('one').style.backgroundColor = '#eee';
+}
+  if (x == 50 || x == 45 ) {
+  document.getElementById('two').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('two').style.backgroundColor = '#eee';
+}
+  if (x == 51 || x == 34 ) {
+  document.getElementById('three').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('three').style.backgroundColor = '#eee';
+}
+  if (x == 52 || x == 8366 ) {
+  document.getElementById('four').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('four').style.backgroundColor = '#eee';
+}
+  if (x == 53 || x == 58 ) {
+  document.getElementById('five').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('five').style.backgroundColor = '#eee';
+}
+  if (x == 54 || x == 46 ) {
+  document.getElementById('six').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('six').style.backgroundColor = '#eee';
+}
+  if (x == 55 || x == 95 ) {
+  document.getElementById('seven').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('seven').style.backgroundColor = '#eee';
+}
+  if (x == 56 || x == 44 ) {
+  document.getElementById('eight').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('eight').style.backgroundColor = '#eee';
+}
+  if (x == 57 || x == 37 ) {
+  document.getElementById('nine').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('nine').style.backgroundColor = '#eee';
+}
+  if (x == 48 || x == 63 ) {
+  document.getElementById('zero').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('zero').style.backgroundColor = '#eee';
+}
+  if (x == 1077 || x == 1045 ) {
+  document.getElementById('hypen').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('hypen').style.backgroundColor = '#eee';
+}
+  if (x == 1097 || x == 1065 ) {
+  document.getElementById('equal').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('equal').style.backgroundColor = '#eee';
+}
+  if (x == 1092 || x == 1060 ) {
+  document.getElementById('q').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('q').style.backgroundColor = '#eee';
+}
+if (x == 1094 || x == 1062 ) {
+  document.getElementById('w').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('w').style.backgroundColor = '#eee';
+}
+  if (x == 1091 || x == 1059 ) {
+  document.getElementById('e').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('e').style.backgroundColor = '#eee';
+}
+  if (x == 1078 || x == 1046) {
+  document.getElementById('r').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('r').style.backgroundColor = '#eee';
+}
+  if (x == 1101 || x == 1069) {
+  document.getElementById('t').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('t').style.backgroundColor = '#eee';
+}
+  if (x == 1085 || x == 1053) {
+  document.getElementById('y').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('y').style.backgroundColor = '#eee';
+}
+  if (x == 1075 || x == 1043) {
+  document.getElementById('u').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('u').style.backgroundColor = '#eee';
+}
+  if (x == 1096 || x == 1064) {
+  document.getElementById('i').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('i').style.backgroundColor = '#eee';
+}
+  if (x == 1199 || x == 1198) {
+  document.getElementById('o').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('o').style.backgroundColor = '#eee';
+}
+  if (x == 1079 || x == 1047) {
+  document.getElementById('p').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('p').style.backgroundColor = '#eee';
+}
+  if (x == 1082 || x == 1050) {
+  document.getElementById('lb').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('lb').style.backgroundColor = '#eee';
+}
+  if (x == 1098 || x == 1066) {
+  document.getElementById('rb').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('rb').style.backgroundColor = '#eee';
+}
+  if (x == 1081 || x == 1049 ) {
+  document.getElementById('a').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('a').style.backgroundColor = '#eee';
+}
+  if (x == 1099 || x == 1067 ) {
+  document.getElementById('s').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('s').style.backgroundColor = '#eee';
+}
+  if (x == 1073 || x == 1041 ) {
+  document.getElementById('d').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('d').style.backgroundColor = '#eee';
+}
+  if (x == 1257 || x == 1256 ) {
+  document.getElementById('f').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('f').style.backgroundColor = '#bbb';
+}
+  if (x == 1072 || x == 1040 ) {
+  document.getElementById('g').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('g').style.backgroundColor = '#eee';
+}
+  if (x == 1093 || x == 1061 ) {
+  document.getElementById('h').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('h').style.backgroundColor = '#eee';
+}
+  if (x == 1088 || x == 1056 ) {
+  document.getElementById('j').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('j').style.backgroundColor = '#bbb';
+}  if (x == 1086 || x == 1054 ) {
+  document.getElementById('k').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('k').style.backgroundColor = '#eee';
+}  if (x == 1083 || x == 1051 ) {
+  document.getElementById('l').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('l').style.backgroundColor = '#eee';
+}  if (x == 1076 || x == 1044 ) {
+  document.getElementById('semicolon').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('semicolon').style.backgroundColor = '#eee';
+}  if (x == 1087 || x == 1055 ) {
+  document.getElementById('apostrophe').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('apostrophe').style.backgroundColor = '#eee';
+}
+  if (x == 13 ) {
+  document.getElementById('enter').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('enter').style.backgroundColor = '#eee';
+}
+  if (x == 1103 || x == 1071 ) {
+  document.getElementById('z').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('z').style.backgroundColor = '#eee';
+}
+  if (x == 1095 || x == 1063 ) {
+  document.getElementById('x').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('x').style.backgroundColor = '#eee';
+}
+  if (x == 1105 || x == 1025 ) {
+  document.getElementById('c').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('c').style.backgroundColor = '#eee';
+}
+  if (x == 1089 || x == 1057 ) {
+  document.getElementById('v').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('v').style.backgroundColor = '#eee';
+}
+  if (x == 1084 || x == 1052 ) {
+  document.getElementById('b').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('b').style.backgroundColor = '#eee';
+}
+  if (x == 1080 || x == 1048 ) {
+  document.getElementById('n').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('n').style.backgroundColor = '#eee';
+}
+  if (x == 1090 || x == 1058 ) {
+  document.getElementById('m').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('m').style.backgroundColor = '#eee';
+}
+  if (x == 1100 || x == 1068 ) {
+  document.getElementById('comma').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('comma').style.backgroundColor = '#eee';
+}  if (x == 1074 || x == 1042 ) {
+  document.getElementById('period').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('period').style.backgroundColor = '#eee';
+}  if (x == 1102 || x == 1070 ) {
+  document.getElementById('slash').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('slash').style.backgroundColor = '#eee';
+}
+  if (x == 32 ) {
+  document.getElementById('space').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('space').style.backgroundColor = '#eee';
+}
+}
+function up(event) {
+  if (event.shiftKey){} else {
+  document.getElementById('shift').style.backgroundColor = '#eee';
+}
+  if (event.shiftKey){} else {
+  document.getElementById('shift2').style.backgroundColor = '#eee';
+}
+}
+    </script>
+    
+<style>
+html {
+  font-family:arial;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+td, th {
+  border: 1px solid #AAA;
+  text-align: center;
+  padding: 1px;
+}
+textarea {
+    font-size: 1.4rem;
+    width: 98%;
+} 
+.note {
+  border: 1px solid #DDD;
+  width: 10%;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.box {
+font-size: 2.0rem;
+display: inline-block;
+line-height: 1.0;
+width: 40px;
+border: 1px solid;
+min-height: 30px;
+padding: 3px;
+background-color: #eee;
+border-radius: 5px;
+}
+</style>
+
+
+</head>
+<body>  
+
+<body>  
+
+<center><h1 class="text-center">Mongolian Cyrillic keyboard</h1>
+</center>
+ <div class="message"></div>
+<center>
+<table>
+<thead>
+<tr>
+<th>
+<button onclick="copytext()">Copy text</button>
+<button onclick="bolor()">Bolor D.</button><br>
+<button onclick="searchglosbe()">Glosbe</button>
+<button onclick="searchwikt()">Wiktionary</button>
+<script>
+function bolor() {
+  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('textbox').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+}
+function searchglosbe() {
+  window.open("http://glosbe.com/mn/en/" + document.getElementById('textbox').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+}
+function searchwikt() {
+  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('textbox').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+}
+</script>
+</th>
+</thead>
+<tbody>
+<tr>
+<td>
+<textarea rows="10"
+onkeydown="down(event)"
+onkeypress="press(event)"
+onkeyup="up(event)"
+id="textbox"></textarea>    
+</td>
+</tr>
+</tbody>
+</table><br>
+<div class="body" align="center" style="line-height: 2.4;">
+<span class="box" id="backtick">=⁺</span>
+<span class="box" id="one">№¹</span>
+<span class="box" id="two">-²</span>
+<span class="box" id="three">"³</span>
+<span class="box" id="four">₮⁴</span>
+<span class="box" id="five">:⁵</span>
+<span class="box" id="six">.⁶</span>
+<span class="box" id="seven">_⁷</span>
+<span class="box" id="eight">,⁸</span>
+<span class="box" id="nine">%⁹</span>
+<span class="box" id="zero">?⁰</span>
+<span class="box" id="hypen">Е</span>
+<span class="box" id="equal">Щ</span>
+<span class="box" id="back" style="width: 80px;">Back</span><br>
+<span class="box" id="q">Ф</span>
+<span class="box" id="w">Ц</span>
+<span class="box" id="e">У</span>
+<span class="box" id="r">Ж</span>
+<span class="box" id="t">Э</span>
+<span class="box" id="y">Н</span>
+<span class="box" id="u">Г</span>
+<span class="box" id="i">Ш</span>
+<span class="box" id="o">Ү</span>
+<span class="box" id="p">З</span>
+<span class="box" id="lb">К</span>
+<span class="box" id="rb">Ъ</span><br>
+<span class="box" id="caps" style="width: 80px;">Caps</span>
+<span class="box" id="a">Й</span>
+<span class="box" id="s">Ы</span>
+<span class="box" id="d">Б</span>
+<span class="box" id="f" style="background-color:#bbb;">Ө</span>
+<span class="box" id="g">А</span>
+<span class="box" id="h">Х</span>
+<span class="box" id="j" style="background-color:#bbb;">Р</span>
+<span class="box" id="k">О</span>
+<span class="box" id="l">Л</span>
+<span class="box" id="semicolon">Д</span>
+<span class="box" id="apostrophe">П</span>
+<span class="box" id="enter" style="width: 80px;">Enter</span><br>
+<span class="box" id="shift" style="width: 105px;">Shift</span>
+<span class="box" id="z">Я</span>
+<span class="box" id="x">Ч</span>
+<span class="box" id="c">Ё</span>
+<span class="box" id="v">С</span>
+<span class="box" id="b">М</span>
+<span class="box" id="n">И</span>
+<span class="box" id="m">Т</span>
+<span class="box" id="comma">Ь</span>
+<span class="box" id="period">В</span>
+<span class="box" id="slash">Ю</span>
+<span class="box" id="shift2" style="width: 105px;">Shift</span><br>
+<span class="box" id="space" style="width: 240px;">​</span>
+</div>
+</center>
+<script>
+var input = document.getElementById("textbox");
+input.addEventListener("keyup", function(event) {
+if (event.getModifierState("CapsLock")) {
+  document.getElementById('caps').style.backgroundColor = '#7ca';
+} else {
+  document.getElementById('caps').style.backgroundColor = '#eee';
+}
+});
+</script>
+</body>
+</html>
