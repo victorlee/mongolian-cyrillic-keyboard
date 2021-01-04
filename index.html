@@ -472,9 +472,11 @@ function searchwikt() {
 <textarea
 id="input_textarea"
 autofocus=""
-placeholder="input."
+placeholder="input"
 rows="11"
-oninput="onInputTextChange(this.value)"></textarea>    
+oninput="onInputTextChange(this.value)"
+onkeydown="back(event)"
+onkeypress="hilight(event)"></textarea>    
 </td>
 <td>
 <textarea rows="11" placeholder="output" id="output_textarea"></textarea>    
@@ -483,7 +485,6 @@ oninput="onInputTextChange(this.value)"></textarea>
 </tbody>
 </table>
 <div class="body" align="center" style="line-height: 2.4;">
-<textarea onkeydown="back(event)" onkeypress="hilight(event)"></textarea><br>
 <span class="box" id="backtick">=⁺</span>
 <span class="box" id="one">№¹</span>
 <span class="box" id="two">-²</span>
