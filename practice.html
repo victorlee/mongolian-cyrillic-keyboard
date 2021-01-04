@@ -277,9 +277,8 @@ function up(event) {
 <style>
 html {
   font-family:arial;
+  text-align: center;
 }
-
-
 textarea {
     font-size: 1.4rem;
     width: 70%;
@@ -306,17 +305,9 @@ background-color: #eee;
 border-radius: 5px;
 }
 </style>
-
-
 </head>
 <body>  
-
-<body>  
-
-<center><h1 class="text-center">Practice typing with Mongolian keyboard!</h1>
-</center>
- <div class="message"></div>
-<center>
+<h1 class="text-center">Practice typing with Mongolian keyboard!</h1>
 
 <textarea rows="11"
 onkeydown="down(event)"
@@ -378,7 +369,6 @@ id="textbox"></textarea>
 <span class="box" id="shift2" style="width: 105px;">Shift</span><br>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
-</center>
 <script>
 var input = document.getElementById("textbox");
 input.addEventListener("keyup", function(event) {
