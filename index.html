@@ -3,113 +3,422 @@
 <head>
     <title>Mongolian Cyrillic keyboard</title>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-function doc_keyDown(e) {
- if (e.key === "`") {document.getElementById("input_textarea").value += "=";}
- if (e.key === "1") {document.getElementById("input_textarea").value += "№";}
- if (e.key === "2") {document.getElementById("input_textarea").value += "-";}
- if (e.key === "3") {document.getElementById("input_textarea").value += ":";}
- if (e.key === "4") {document.getElementById("input_textarea").value += "₮";}
- if (e.key === "5") {document.getElementById("input_textarea").value += ":";}
- if (e.key === "6") {document.getElementById("input_textarea").value += ".";}
- if (e.key === "7") {document.getElementById("input_textarea").value += "_";}
- if (e.key === "8") {document.getElementById("input_textarea").value += ";}";}
- if (e.key === "9") {document.getElementById("input_textarea").value += "%";}
- if (e.key === "0") {document.getElementById("input_textarea").value += "?";}
- if (e.key === "-") {document.getElementById("input_textarea").value += "е";}
- if (e.key === "=") {document.getElementById("input_textarea").value += "щ";}
- if (e.key === "~") {document.getElementById("input_textarea").value += "+";}
- if (e.key === "!") {document.getElementById("input_textarea").value += "1";}
- if (e.key === "@") {document.getElementById("input_textarea").value += "2";}
- if (e.key === "#") {document.getElementById("input_textarea").value += "3";}
- if (e.key === "$") {document.getElementById("input_textarea").value += "4";}
- if (e.key === "%") {document.getElementById("input_textarea").value += "5";}
- if (e.key === "^") {document.getElementById("input_textarea").value += "6";}
- if (e.key === "&") {document.getElementById("input_textarea").value += "7";}
- if (e.key === "*") {document.getElementById("input_textarea").value += "8";}
- if (e.key === "(") {document.getElementById("input_textarea").value += "9";}
- if (e.key === ")") {document.getElementById("input_textarea").value += "0";}
- if (e.key === "_") {document.getElementById("input_textarea").value += "Е";}
- if (e.key === "+") {document.getElementById("input_textarea").value += "Щ";}
- if (e.key === "q") {document.getElementById("input_textarea").value += "ф";}
- if (e.key === "w") {document.getElementById("input_textarea").value += "ц";}
- if (e.key === "e") {document.getElementById("input_textarea").value += "у";}
- if (e.key === "r") {document.getElementById("input_textarea").value += "ж";}
- if (e.key === "t") {document.getElementById("input_textarea").value += "э";}
- if (e.key === "y") {document.getElementById("input_textarea").value += "н";}
- if (e.key === "u") {document.getElementById("input_textarea").value += "г";}
- if (e.key === "i") {document.getElementById("input_textarea").value += "ш";}
- if (e.key === "o") {document.getElementById("input_textarea").value += "ү";}
- if (e.key === "p") {document.getElementById("input_textarea").value += "з";}
- if (e.key === "[") {document.getElementById("input_textarea").value += "к";}
- if (e.key === "]") {document.getElementById("input_textarea").value += "ъ";}
- if (e.key === "Q") {document.getElementById("input_textarea").value += "Ф";}
- if (e.key === "W") {document.getElementById("input_textarea").value += "Ц";}
- if (e.key === "E") {document.getElementById("input_textarea").value += "У";}
- if (e.key === "R") {document.getElementById("input_textarea").value += "Ж";}
- if (e.key === "T") {document.getElementById("input_textarea").value += "Э";}
- if (e.key === "Y") {document.getElementById("input_textarea").value += "Н";}
- if (e.key === "U") {document.getElementById("input_textarea").value += "Г";}
- if (e.key === "I") {document.getElementById("input_textarea").value += "Ш";}
- if (e.key === "O") {document.getElementById("input_textarea").value += "Ү";}
- if (e.key === "P") {document.getElementById("input_textarea").value += "З";}
- if (e.key === "{") {document.getElementById("input_textarea").value += "К";}
- if (e.key === "}") {document.getElementById("input_textarea").value += "Ъ";}
- if (e.key === "a") {document.getElementById("input_textarea").value += "й";}
- if (e.key === "s") {document.getElementById("input_textarea").value += "ы";}
- if (e.key === "d") {document.getElementById("input_textarea").value += "б";}
- if (e.key === "f") {document.getElementById("input_textarea").value += "ө";}
- if (e.key === "g") {document.getElementById("input_textarea").value += "а";}
- if (e.key === "h") {document.getElementById("input_textarea").value += "х";}
- if (e.key === "j") {document.getElementById("input_textarea").value += "р";}
- if (e.key === "k") {document.getElementById("input_textarea").value += "о";}
- if (e.key === "l") {document.getElementById("input_textarea").value += "л";}
- if (e.key === ";") {document.getElementById("input_textarea").value += "д";}
- if (e.key === "'") {document.getElementById("input_textarea").value += "п";}
- if (e.key === "A") {document.getElementById("input_textarea").value += "Й";}
- if (e.key === "S") {document.getElementById("input_textarea").value += "Ы";}
- if (e.key === "D") {document.getElementById("input_textarea").value += "Б";}
- if (e.key === "F") {document.getElementById("input_textarea").value += "Ө";}
- if (e.key === "G") {document.getElementById("input_textarea").value += "А";}
- if (e.key === "H") {document.getElementById("input_textarea").value += "Х";}
- if (e.key === "J") {document.getElementById("input_textarea").value += "Р";}
- if (e.key === "K") {document.getElementById("input_textarea").value += "О";}
- if (e.key === "L") {document.getElementById("input_textarea").value += "Л";}
- if (e.key === ":") {document.getElementById("input_textarea").value += "Д";}
- if (e.key === '"') {document.getElementById("input_textarea").value += "П";}
- if (e.key === "z") {document.getElementById("input_textarea").value += "я";}
- if (e.key === "x") {document.getElementById("input_textarea").value += "ч";}
- if (e.key === "c") {document.getElementById("input_textarea").value += "ё";}
- if (e.key === "v") {document.getElementById("input_textarea").value += "с";}
- if (e.key === "b") {document.getElementById("input_textarea").value += "м";}
- if (e.key === "n") {document.getElementById("input_textarea").value += "и";}
- if (e.key === "m") {document.getElementById("input_textarea").value += "т";}
- if (e.key === ",") {document.getElementById("input_textarea").value += "Ь";}
- if (e.key === ".") {document.getElementById("input_textarea").value += "в";}
- if (e.key === "/") {document.getElementById("input_textarea").value += "ю";}
- if (e.key === "Z") {document.getElementById("input_textarea").value += "Я";}
- if (e.key === "X") {document.getElementById("input_textarea").value += "Ч";}
- if (e.key === "C") {document.getElementById("input_textarea").value += "Ё";}
- if (e.key === "V") {document.getElementById("input_textarea").value += "С";}
- if (e.key === "B") {document.getElementById("input_textarea").value += "М";}
- if (e.key === "N") {document.getElementById("input_textarea").value += "И";}
- if (e.key === "M") {document.getElementById("input_textarea").value += "Т";}
- if (e.key === "<") {document.getElementById("input_textarea").value += "Ь";}
- if (e.key === ">") {document.getElementById("input_textarea").value += "В";}
- if (e.key === "?") {document.getElementById("input_textarea").value += "Ю";}
- if (e.key === " ") {document.getElementById("input_textarea").value += " ";}
- if (event.keyCode == 13) {document.getElementById("input_textarea").value += "\r\n";}
-return false;
-}
-document.addEventListener(doc_keyDown, false);
 
+var conversion = {
+"`":"=",
+"~":"+",
+"!":"1",
+"@":"2",
+"#":"3",
+"$":"4",
+"%":"5",
+"^":"6",
+"&":"7",
+"*":"8",
+"(":"9",
+")":"0",
+"1":"№",
+"2":"-",
+"3":'"',
+"4":"₮",
+"5":":",
+"6":".",
+"7":"_",
+"8":",",
+"9":"%",
+"0":"?",
+"-":"е",
+"_":"Е",
+"=":"щ",
+"+":"Щ",
+
+"q":"ф",
+"Q":"Ф",
+"w":"ц",
+"W":"Ц",
+"e":"у",
+"E":"У",
+"r":"ж",
+"R":"Ж",
+"t":"э",
+"T":"Э",
+"y":"н",
+"Y":"Н",
+"u":"г",
+"U":"Г",
+"i":"ш",
+"I":"Ш",
+"o":"ү",
+"O":"Ү",
+"p":"з",
+"P":"З",
+"[":"к",
+"{":"К",
+"]":"ъ",
+"}":"Ъ",
+
+"a":"й",
+"A":"Й",
+"s":"ы",
+"S":"Ы",
+"d":"б",
+"D":"Б",
+"f":"ө",
+"F":"Ө",
+"g":"а",
+"G":"А",
+"h":"х",
+"H":"Х",
+"j":"р",
+"J":"Р",
+"k":"о",
+"K":"О",
+"l":"л",
+"L":"Л",
+";":"д",
+":":"Д",
+"'":"п",
+'"':"П",
+
+"z":"я",
+"Z":"Я",
+"x":"ч",
+"X":"Ч",
+"c":"ё",
+"C":"Ё",
+"v":"с",
+"V":"С",
+"b":"м",
+"B":"М",
+"n":"и",
+"N":"И",
+"m":"т",
+"M":"Т",
+",":"ь",
+"<":"Ь",
+".":"в",
+">":"В",
+"\u002f":"ю",
+"?":"Ю",
+        };
+
+ var maxLength = Object.keys(conversion)
+    .reduce((a, b) => a.length > b.length ? a : b) // get the longest word
+    .length; // and it's length
+  
+  function convert (text) {
+    var converted = "";
+    var cur = 0;
+    while (cur < text.length) {
+      var testedPhoneme;
+      var symbol = undefined;
+      for (var length = maxLength; length > 0; length --) {
+        testedPhoneme = text.substr(cur, length);
+        if (conversion[testedPhoneme]) {
+          symbol = conversion[testedPhoneme];
+          break; // stop the loop
+        }
+      }
+      if (symbol) {
+        converted += symbol;
+        cur += testedPhoneme.length;
+      }
+      else {
+        converted += text[cur]
+        cur++;
+      }
+    }
+    return converted
+  }
+
+  function onInputTextChange(txt) {
+    var outputTextareaElem = document.getElementById("output_textarea");
+    var div = document.createElement("div");
+    var outputHtmlEntities = convert(txt);
+    div.innerHTML = outputHtmlEntities;
+    outputTextareaElem.value = div.innerText;
+  }
+
+function select() {
+  const input = document.getElementById('input_textarea');
+  input.focus();
+  input.select();
+}   
 function copytext() {
-  var copyText = document.getElementById("input_textarea");
+  var copyText = document.getElementById("output_textarea");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
 }
-       
+
+$(function(){
+    $('.linked').scroll(function(){
+        $('.linked').scrollTop($(this).scrollTop());    
+    })
+})
+
+function down(event) {
+  var x = event.which || event.keyCode;
+  if ( x == 8 ) {
+  document.getElementById('back').style.backgroundColor = '#7ca';
+} else {
+  document.getElementById('back').style.backgroundColor = '#eee';
+}
+  var x = document.getElementById("demo");
+  if (event.shiftKey) {
+  document.getElementById('shift').style.backgroundColor = '#7ca';
+}
+  if (event.shiftKey) {
+  document.getElementById('shift2').style.backgroundColor = '#7ca';
+}
+}
+function press(event) {
+  var x = event.which || event.keyCode;
+  if (x == 96 || x == 126 ) {
+  document.getElementById('backtick').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('backtick').style.backgroundColor = '#eee';
+}
+  if (x == 49 || x == 33 ) {
+  document.getElementById('one').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('one').style.backgroundColor = '#eee';
+}
+  if (x == 50 || x == 64 ) {
+  document.getElementById('two').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('two').style.backgroundColor = '#eee';
+}
+  if (x == 51 || x == 35 ) {
+  document.getElementById('three').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('three').style.backgroundColor = '#eee';
+}
+  if (x == 52 || x == 36 ) {
+  document.getElementById('four').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('four').style.backgroundColor = '#eee';
+}
+  if (x == 53 || x == 37 ) {
+  document.getElementById('five').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('five').style.backgroundColor = '#eee';
+}
+  if (x == 54 || x == 94 ) {
+  document.getElementById('six').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('six').style.backgroundColor = '#eee';
+}
+  if (x == 55 || x == 38 ) {
+  document.getElementById('seven').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('seven').style.backgroundColor = '#eee';
+}
+  if (x == 56 || x == 42 ) {
+  document.getElementById('eight').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('eight').style.backgroundColor = '#eee';
+}
+  if (x == 57 || x == 40 ) {
+  document.getElementById('nine').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('nine').style.backgroundColor = '#eee';
+}
+  if (x == 48 || x == 41 ) {
+  document.getElementById('zero').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('zero').style.backgroundColor = '#eee';
+}
+  if (x == 45 || x == 95 ) {
+  document.getElementById('hypen').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('hypen').style.backgroundColor = '#eee';
+}
+  if (x == 61 || x == 43 ) {
+  document.getElementById('equal').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('equal').style.backgroundColor = '#eee';
+}
+  if (x == 81 || x == 113) {
+  document.getElementById('q').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('q').style.backgroundColor = '#eee';
+}
+if (x == 87 || x == 119) {
+  document.getElementById('w').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('w').style.backgroundColor = '#eee';
+}
+  if (x == 101 || x == 69) {
+  document.getElementById('e').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('e').style.backgroundColor = '#eee';
+}
+  if (x == 114 || x == 82) {
+  document.getElementById('r').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('r').style.backgroundColor = '#eee';
+}
+  if (x == 116 || x == 84) {
+  document.getElementById('t').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('t').style.backgroundColor = '#eee';
+}
+  if (x == 121 || x == 89) {
+  document.getElementById('y').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('y').style.backgroundColor = '#eee';
+}
+  if (x == 117 || x == 85) {
+  document.getElementById('u').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('u').style.backgroundColor = '#eee';
+}
+  if (x == 105 || x == 73) {
+  document.getElementById('i').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('i').style.backgroundColor = '#eee';
+}
+  if (x == 111 || x == 79) {
+  document.getElementById('o').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('o').style.backgroundColor = '#eee';
+}
+  if (x == 112 || x == 80) {
+  document.getElementById('p').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('p').style.backgroundColor = '#eee';
+}
+  if (x == 91 || x == 123) {
+  document.getElementById('lb').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('lb').style.backgroundColor = '#eee';
+}
+  if (x == 93 || x == 125) {
+  document.getElementById('rb').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('rb').style.backgroundColor = '#eee';
+}
+  if (x == 97 || x == 65 ) {
+  document.getElementById('a').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('a').style.backgroundColor = '#eee';
+}
+  if (x == 115 || x == 83 ) {
+  document.getElementById('s').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('s').style.backgroundColor = '#eee';
+}
+  if (x == 100 || x == 68 ) {
+  document.getElementById('d').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('d').style.backgroundColor = '#eee';
+}
+  if (x == 102 || x == 70 ) {
+  document.getElementById('f').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('f').style.backgroundColor = '#bbb';
+}
+  if (x == 103 || x == 71 ) {
+  document.getElementById('g').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('g').style.backgroundColor = '#eee';
+}
+  if (x == 104 || x == 72 ) {
+  document.getElementById('h').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('h').style.backgroundColor = '#eee';
+}
+  if (x == 106 || x == 74 ) {
+  document.getElementById('j').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('j').style.backgroundColor = '#bbb';
+}  if (x == 107 || x == 75 ) {
+  document.getElementById('k').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('k').style.backgroundColor = '#eee';
+}  if (x == 108 || x == 76 ) {
+  document.getElementById('l').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('l').style.backgroundColor = '#eee';
+}  if (x == 59 || x == 58 ) {
+  document.getElementById('semicolon').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('semicolon').style.backgroundColor = '#eee';
+}  if (x == 39 || x == 34 ) {
+  document.getElementById('apostrophe').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('apostrophe').style.backgroundColor = '#eee';
+}
+  if (x == 13 ) {
+  document.getElementById('enter').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('enter').style.backgroundColor = '#eee';
+}
+  if (x == 122 || x == 90 ) {
+  document.getElementById('z').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('z').style.backgroundColor = '#eee';
+}
+  if (x == 120 || x == 88 ) {
+  document.getElementById('x').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('x').style.backgroundColor = '#eee';
+}
+  if (x == 99 || x == 67 ) {
+  document.getElementById('c').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('c').style.backgroundColor = '#eee';
+}
+  if (x == 118 || x == 86 ) {
+  document.getElementById('v').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('v').style.backgroundColor = '#eee';
+}
+  if (x == 98 || x == 66 ) {
+  document.getElementById('b').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('b').style.backgroundColor = '#eee';
+}
+  if (x == 110 || x == 78 ) {
+  document.getElementById('n').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('n').style.backgroundColor = '#eee';
+}
+  if (x == 109 || x == 77 ) {
+  document.getElementById('m').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('m').style.backgroundColor = '#eee';
+}
+  if (x == 44 || x == 60 ) {
+  document.getElementById('comma').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('comma').style.backgroundColor = '#eee';
+}  if (x == 46 || x == 62 ) {
+  document.getElementById('period').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('period').style.backgroundColor = '#eee';
+}  if (x == 47 || x == 63 ) {
+  document.getElementById('slash').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('slash').style.backgroundColor = '#eee';
+}
+  if (x == 32 ) {
+  document.getElementById('space').style.backgroundColor = '#f55';
+} else {
+  document.getElementById('space').style.backgroundColor = '#eee';
+}
+}
+function up(event) {
+  if (event.shiftKey){} else {
+  document.getElementById('shift').style.backgroundColor = '#eee';
+}
+  if (event.shiftKey){} else {
+  document.getElementById('shift2').style.backgroundColor = '#eee';
+}
+}
     </script>
     
 <style>
@@ -158,20 +467,25 @@ border-radius: 5px;
 <h1 class="text-center">Mongolian Cyrillic keyboard</h1>
 <table>
 <thead>
+<tr>
+<th style="width: 45%">
+<button onclick="select('input_textarea')">Select all</button>
+<button onclick="document.getElementById('input_textarea').value = ''">Clear</button>
+</th>
 <th style="width: 45%">
 <button onclick="copytext()">Copy text</button>
-<button onclick="bolor()">Bolor D.</button>
+<button onclick="bolor()">Bolor D.</button><br>
 <button onclick="searchglosbe()">Glosbe</button>
 <button onclick="searchwikt()">Wiktionary</button>
 <script>
 function bolor() {
-  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('input_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('output_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
 }
 function searchglosbe() {
-  window.open("http://glosbe.com/mn/en/" + document.getElementById('input_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+  window.open("http://glosbe.com/mn/en/" + document.getElementById('output_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
 }
 function searchwikt() {
-  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('input_textarea').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('output_textarea').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
 }
 </script>
 </th>
@@ -184,9 +498,16 @@ id="input_textarea"
 autofocus=""
 placeholder="input"
 rows="10"
-onKeyPress="return doc_keyDown(event)"
+oninput="onInputTextChange(this.value)"
+onkeydown="down(event)"
+onkeypress="press(event)"
+onkeyup="up(event)"
 spellcheck="false"
+class="linked"
 ></textarea>    
+</td>
+<td>
+<textarea rows="10" placeholder="output" id="output_textarea" class="linked"></textarea>    
 </td>
 </tr>
 </tbody>
@@ -203,8 +524,8 @@ spellcheck="false"
 <span class="box" id="eight">,⁸</span>
 <span class="box" id="nine">%⁹</span>
 <span class="box" id="zero">?⁰</span>
-<span class="box" id="hypen" style="background-color:#abc;">Е</span>
-<span class="box" id="equal" style="background-color:#abc;">Щ</span>
+<span class="box" id="hypen">Е</span>
+<span class="box" id="equal">Щ</span>
 <span class="box" id="back" style="width: 80px;">Back</span><br>
 <span class="box" id="q">Ф</span>
 <span class="box" id="w">Ц</span>
@@ -216,8 +537,8 @@ spellcheck="false"
 <span class="box" id="i">Ш</span>
 <span class="box" id="o">Ү</span>
 <span class="box" id="p">З</span>
-<span class="box" id="lb" style="background-color:#abc;">К</span>
-<span class="box" id="rb" style="background-color:#abc;">Ъ</span><br>
+<span class="box" id="lb">К</span>
+<span class="box" id="rb">Ъ</span><br>
 <span class="box" id="caps" style="width: 80px;">Caps</span>
 <span class="box" id="a">Й</span>
 <span class="box" id="s">Ы</span>
@@ -228,8 +549,8 @@ spellcheck="false"
 <span class="box" id="j" style="background-color:#bbb;">Р</span>
 <span class="box" id="k">О</span>
 <span class="box" id="l">Л</span>
-<span class="box" id="semicolon" style="background-color:#abc;">Д</span>
-<span class="box" id="apostrophe" style="background-color:#abc;">П</span>
+<span class="box" id="semicolon">Д</span>
+<span class="box" id="apostrophe">П</span>
 <span class="box" id="enter" style="width: 80px;">Enter</span><br>
 <span class="box" id="shift" style="width: 105px;">Shift</span>
 <span class="box" id="z">Я</span>
@@ -239,13 +560,13 @@ spellcheck="false"
 <span class="box" id="b">М</span>
 <span class="box" id="n">И</span>
 <span class="box" id="m">Т</span>
-<span class="box" id="comma" style="background-color:#abc;">Ь</span>
-<span class="box" id="period" style="background-color:#abc;">В</span>
-<span class="box" id="slash" style="background-color:#abc;">Ю</span>
+<span class="box" id="comma">Ь</span>
+<span class="box" id="period">В</span>
+<span class="box" id="slash">Ю</span>
 <span class="box" id="shift2" style="width: 105px;">Shift</span><br>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
-    <br><a href="practice.html">Practice typing with Mongolian keyboard!</a>
+    <a href="practice.html">Practice typing with Mongolian keyboard!</a>
 
 <script>
 var input = document.getElementById("input_textarea");
