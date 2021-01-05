@@ -5,9 +5,20 @@
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-
 var conversion = {
 "`":"=",
+"1":"№",
+"2":"-",
+"3":':',
+"4":"₮",
+"5":":",
+"6":".",
+"7":"_",
+"8":",",
+"9":"%",
+"0":"?",
+"-":"е",
+"=":"щ",
 "~":"+",
 "!":"1",
 "@":"2",
@@ -19,145 +30,97 @@ var conversion = {
 "*":"8",
 "(":"9",
 ")":"0",
-"1":"№",
-"2":"-",
-"3":'"',
-"4":"₮",
-"5":":",
-"6":".",
-"7":"_",
-"8":",",
-"9":"%",
-"0":"?",
-"-":"е",
 "_":"Е",
-"=":"щ",
 "+":"Щ",
-
 "q":"ф",
-"Q":"Ф",
 "w":"ц",
-"W":"Ц",
 "e":"у",
-"E":"У",
 "r":"ж",
-"R":"Ж",
 "t":"э",
-"T":"Э",
 "y":"н",
-"Y":"Н",
 "u":"г",
-"U":"Г",
 "i":"ш",
-"I":"Ш",
 "o":"ү",
-"O":"Ү",
 "p":"з",
-"P":"З",
 "[":"к",
-"{":"К",
 "]":"ъ",
+"Q":"Ф",
+"W":"Ц",
+"E":"У",
+"R":"Ж",
+"T":"Э",
+"Y":"Н",
+"U":"Г",
+"I":"Ш",
+"O":"Ү",
+"P":"З",
+"{":"К",
 "}":"Ъ",
-
 "a":"й",
-"A":"Й",
 "s":"ы",
-"S":"Ы",
 "d":"б",
-"D":"Б",
 "f":"ө",
-"F":"Ө",
 "g":"а",
-"G":"А",
 "h":"х",
-"H":"Х",
 "j":"р",
-"J":"Р",
 "k":"о",
-"K":"О",
 "l":"л",
-"L":"Л",
 ";":"д",
-":":"Д",
 "'":"п",
+"A":"Й",
+"S":"Ы",
+"D":"Б",
+"F":"Ө",
+"G":"А",
+"H":"Х",
+"J":"Р",
+"K":"О",
+"L":"Л",
+":":"Д",
 '"':"П",
-
 "z":"я",
-"Z":"Я",
 "x":"ч",
-"X":"Ч",
 "c":"ё",
-"C":"Ё",
 "v":"с",
-"V":"С",
 "b":"м",
-"B":"М",
 "n":"и",
-"N":"И",
 "m":"т",
-"M":"Т",
 ",":"ь",
-"<":"Ь",
 ".":"в",
+"/":"ю",
+"Z":"Я",
+"X":"Ч",
+"C":"Ё",
+"V":"С",
+"B":"М",
+"N":"И",
+"M":"Т",
+"<":"Ь",
 ">":"В",
-"\u002f":"ю",
 "?":"Ю",
-        };
-
- var maxLength = Object.keys(conversion)
-    .reduce((a, b) => a.length > b.length ? a : b) // get the longest word
-    .length; // and it's length
-  
-  function convert (text) {
-    var converted = "";
-    var cur = 0;
-    while (cur < text.length) {
-      var testedPhoneme;
-      var symbol = undefined;
-      for (var length = maxLength; length > 0; length --) {
-        testedPhoneme = text.substr(cur, length);
-        if (conversion[testedPhoneme]) {
-          symbol = conversion[testedPhoneme];
-          break; // stop the loop
-        }
-      }
-      if (symbol) {
-        converted += symbol;
-        cur += testedPhoneme.length;
-      }
-      else {
-        converted += text[cur]
-        cur++;
-      }
-    }
-    return converted
+"":"",
+"":"",
+"":"",
+}
+area = document.getElementById("input_textarea");
+function doc_keyDown(e) {
+  newkey = conversion[e.key]
+  if (newkey) {
+    area.value = area.value.split(e.key).join(newkey);
   }
-
-  function onInputTextChange(txt) {
-    var outputTextareaElem = document.getElementById("output_textarea");
-    var div = document.createElement("div");
-    var outputHtmlEntities = convert(txt);
-    div.innerHTML = outputHtmlEntities;
-    outputTextareaElem.value = div.innerText;
-  }
-
-function select() {
-  const input = document.getElementById('input_textarea');
-  input.focus();
-  input.select();
-}   
+  return false;
+}
+document.addEventListener("keyup", doc_keyDown, false);
+document.addEventListener("keydown", doc_keyDown, false);
+        
 function copytext() {
-  var copyText = document.getElementById("output_textarea");
+  var copyText = document.getElementById("input_textarea");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
 }
-
-$(function(){
-    $('.linked').scroll(function(){
-        $('.linked').scrollTop($(this).scrollTop());    
-    })
-})
+        
+// ------------------------------------
 
 function down(event) {
   var x = event.which || event.keyCode;
@@ -467,11 +430,6 @@ border-radius: 5px;
 <h1 class="text-center">Mongolian Cyrillic keyboard</h1>
 <table>
 <thead>
-<tr>
-<th style="width: 45%">
-<button onclick="select('input_textarea')">Select all</button>
-<button onclick="document.getElementById('input_textarea').value = ''">Clear</button>
-</th>
 <th style="width: 45%">
 <button onclick="copytext()">Copy text</button>
 <button onclick="bolor()">Bolor D.</button><br>
@@ -479,13 +437,13 @@ border-radius: 5px;
 <button onclick="searchwikt()">Wiktionary</button>
 <script>
 function bolor() {
-  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('output_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('input_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
 }
 function searchglosbe() {
-  window.open("http://glosbe.com/mn/en/" + document.getElementById('output_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+  window.open("http://glosbe.com/mn/en/" + document.getElementById('input_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
 }
 function searchwikt() {
-  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('output_textarea').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('input_textarea').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
 }
 </script>
 </th>
@@ -505,9 +463,6 @@ onkeyup="up(event)"
 spellcheck="false"
 class="linked"
 ></textarea>    
-</td>
-<td>
-<textarea rows="10" placeholder="output" id="output_textarea" class="linked"></textarea>    
 </td>
 </tr>
 </tbody>
