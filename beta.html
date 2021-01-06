@@ -121,7 +121,7 @@ html {
 }
 table {
   border-collapse: collapse;
-  width: 90%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -161,7 +161,7 @@ border-radius: 5px;
 <h1 class="text-center">Mongolian Cyrillic keyboard</h1>
 <table>
 <thead>
-<th style="width: 45%">
+<th>
 <button onclick="copytext()">Copy text</button>
 <button onclick="bolor()">Bolor D.</button>
 <button onclick="searchglosbe()">Glosbe</button>
@@ -186,7 +186,7 @@ function searchwikt() {
 id="input_textarea"
 autofocus=""
 placeholder="input"
-rows="10"
+rows="8"
 onKeyPress="return doc_keyDown(event)"
 spellcheck="false"
 ></textarea>    
@@ -248,8 +248,7 @@ spellcheck="false"
 <span class="box" id="shift2" style="width: 105px;">Shift</span><br>
 <span class="box" id="space" style="width: 240px;">​</span>
 </div>
-    <br><a href="practice.html">Practice typing with Mongolian keyboard!</a>
-
+    <br>Caps lock is unabled with <span style="background-color:#abc;">blue keys</span>. <a href="practice.html">Practice typing with Mongolian keyboard!</a>
 <script>
 var input = document.getElementById("input_textarea");
 input.addEventListener("keyup", function(event) {
