@@ -43,8 +43,7 @@ function doc_keyDown(e) {
  if (e.key === "p") {document.getElementById("input_textarea").value += "з";}
  if (e.key === "[") {document.getElementById("input_textarea").value += "к";}
  if (e.key === "]") {document.getElementById("input_textarea").value += "ъ";}
- if (e.key === "\") {document.getElementById("input_textarea").value += "\";}
- if (e.key === "Q") {document.getElementById("input_textarea").value += "Ф";}
+ if (event.keyCode == 92) {document.getElementById("input_textarea").value += "\u005c";}
  if (e.key === "W") {document.getElementById("input_textarea").value += "Ц";}
  if (e.key === "E") {document.getElementById("input_textarea").value += "У";}
  if (e.key === "R") {document.getElementById("input_textarea").value += "Ж";}
