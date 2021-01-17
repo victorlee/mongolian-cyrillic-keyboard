@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mongolian Cyrillic typer (phonetic)</title>
+<meta charset="utf-8">
+
+    <script type="text/javascript">
+        function getReplacedText(latinText) {
+            if (!latinText) {
+                return "";
+        }
+            var replacedText = "";
+            for (var i = 0, len = latinText.length; i < len; i++) {
+                var curLetter = latinText[i];
+                var pos1Txt = latinText[i + 1];
+                var pos2Txt = latinText[i + 2];
+                if (!(curLetter == "")) {
+                    var dualLetter = latreplaced[curLetter + pos1Txt];
+                    if (dualLetter) {
+                        replacedText += dualLetter;
+                        i++;
+                        continue;
+                    }
+                }
+                replacedText += latreplaced[curLetter] || curLetter;
+            }
+            return replacedText;
+        }
+        
+     
+        var latreplaced = {
+            "A": "А",
+            "B": "Б",
+            "V": "У",
+            "G": "Г",
+            "D": "Д",
+            "YE": "Е",
+            "Ye": "Е",
+            'YO': "Ё",
+            'Yo': "Ё",
+            "J": "Ж",
+            "Z": "З",
+            "I": "И",
+            "IX": "Й",
+            "Ix": "Й",
+            "K": "К",
+            "L": "Л",
+            "M": "М",
+            "N": "Н",
+            "O": "Ө",
+            "Q": "О",
+            "P": "П",
+            "R": "Р",
+            "S": "С",
+            "T": "Т",
+            "U": "Ү",
+            "W": "В",
+            "F": "Ф",
+            "Kh": "Х",
+            "H": "Х",
+            "TS": "Ц",
+            "Ts": "Ц",
+            "C": "Ч",
+            "Sh": "Ш",
+            "SH": "Ш",
+            "Sc": "Щ",
+            "SC": "Щ",
+            "XX": "Ъ",
+            "Xx": "Ъ",
+            "Y": "Ы",
+            "X": "Ь",
+            "E": "Э",
+            'YU': "Ю",
+            'Yu': "Ю",
+            "YA": "Я",
+            "Ya": "Я",
+
+"AI":"АЙ",
+"EI":"ЭЙ",
+"QI":"ОЙ",
+"UI":"ҮЙ",
+"VI":"УЙ",
+"II":"ИЙ",
+
+"Ai":"Ай",
+"Ei":"Эй",
+"Qi":"Ой",
+"Ui":"Үй",
+"Vi":"Уй",
+"Ii":"Ий",
+
+            "a": "а",
+            "b": "б",
+            "v": "у",
+            "g": "г",
+            "d": "д",
+            "ye": "е",
+            "yo": "ё",
+            "j": "ж",
+            "z": "з",
+            "i": "и",
+            "ix": "й",
+            "k": "к",
+            "l": "л",
+            "m": "м",
+            "n": "н",
+            "o": "ө",
+            "q": "о",
+            "p": "п",
+            "r": "р",
+            "s": "с",
+            "t": "т",
+            "u": "ү",
+            "w": "в",
+            "f": "ф",
+            "h": "х",
+            "ts": "ц",
+            "c": "ч",
+            "sh": "ш",
+            "sc": "щ",
+            "xx": "ъ",
+            "y": "ы",
+            "x": "ь",
+            "e": "э",
+            "yu": "ю",
+            "ya": "я",
+
+"ai":"ай",
+"ei":"эй",
+"qi":"ой",
+"ui":"үй",
+"vi":"уй",
+"ii":"ий",
+            
+        };
+
+        function onLatinTextChange(txt) {
+            var replacedTextareaElem = document.getElementById("replaced_textarea");
+            var div = document.createElement("div");
+            var replacedHtmlEntities = getReplacedText(txt);
+            div.innerHTML = replacedHtmlEntities;
+            replacedTextareaElem.value = div.innerText;
+        }
+	    
+	function select() {
+         const input = document.getElementById('latin_textarea');
+ 	 input.focus();
+ 	 input.select();
+	}
+        function copytext() {
+        var copyText = document.getElementById("replaced_textarea");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        }
+    </script>
+    
+<style>
+html, table {font-family:arial}
+table {
+  border-collapse: collapse;
+  width: 70%;
+}
+td, th {
+  border: 1px solid #AAA;
+  text-align: center;
+  padding: 2px;
+}
+textarea {
+	font-size: 13pt;
+	font-family: Arial;
+    width: 96%;
+} 
+.note {
+  border: 1px solid #DDD;
+  width: 45%;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+
+
+</head>
+
+<body>  
+
+<center>
+<h1 class="text-center">Mongolian Cyrillic typer (phonetic)</h1>	
+</center>
+
+<center>
+<table>
+<thead>
+<tr>
+<th>	
+<button onclick="select('latin_textarea')">Select all</button>
+<button onclick="document.getElementById('latin_textarea').value = ''">Clear</button>
+</th>
+<th>
+<button onclick="copytext()">Copy text</button>
+<button onclick="bolor()">Bolor D.</button><br>
+<button onclick="searchglosbe()">Glosbe</button>
+<button onclick="searchwikt()">Wiktionary</button>
+<script>
+function bolor() {
+  window.open("http://www.bolor-toli.com/dictionary/word?authenticity_token=selected_lang=4-1&search=" + document.getElementById('replaced_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+}
+function searchglosbe() {
+  window.open("http://glosbe.com/mn/en/" + document.getElementById('replaced_textarea').value, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+}
+function searchwikt() {
+  window.open("https://en.wiktionary.org/wiki/" + document.getElementById('replaced_textarea').value + "#Mongolian", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=300,width=600,height=600");
+}
+</script>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<textarea
+id="latin_textarea"
+autofocus=""
+placeholder="Latin text here"
+rows="10"
+oninput="onLatinTextChange(this.value)"></textarea>    
+</td>
+<td>
+<textarea rows="10" placeholder="output" id="replaced_textarea"></textarea>    
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+	
+<br>	
+<center>
+<div style="overflow-x:auto; font-size:17px">
+<table>
+<tr style="background-color:#F5F5F5; font-weight:bold;">
+<td>а</td>
+<td>б</td>
+<td>в</td>
+<td>г</td>
+<td>д</td>
+<td>е</td>
+<td>ё</td>
+<td>ж</td>
+<td>з</td>
+<td>и</td>
+<td>й</td>
+<td>к</td>
+<td>л</td>
+<td>м</td>
+<td>н</td>
+<td>о</td>
+<td>ө</td>
+<td>п</td>
+<td>р</td>
+<td>с</td>
+<td>т</td>
+<td>у</td>
+<td>ү</td>
+<td>ф</td>
+<td>х</td>
+<td>ц</td>
+<td>ч</td>
+<td>ш</td>
+<td>щ</td>
+<td>ъ</td>
+<td>ы</td>
+<td>ь</td>
+<td>э</td>
+<td>ю</td>
+<td>я</td>
+</tr>
+<tr>
+<td>a</td>
+<td>b</td>
+<td>w</td>
+<td>g</td>
+<td>d</td>
+<td>ye</td>
+<td>yo</td>
+<td>j</td>
+<td>z</td>
+<td>i</td>
+<td>↓</td>
+<td>k</td>
+<td>l</td>
+<td>m</td>
+<td>n</td>
+<td>q</td>
+<td>o</td>
+<td>p</td>
+<td>r</td>
+<td>s</td>
+<td>t</td>
+<td>v</td>
+<td>u</td>
+<td>f</td>
+<td>h</td>
+<td>ts</td>
+<td>c</td>
+<td>sh</td>
+<td>sc</td>
+<td>xx</td>
+<td>y</td>
+<td>x</td>
+<td>e</td>
+<td>yu</td>
+<td>ya</td>
+</tr>
+</table>
+<br>
+
+<table style="width:180px"><tbody>
+<tr style="background-color:#F5F5F5"><th>ай</th><th>эй</th><th>qй</th><th>vй</th><th>uй</th><th>ий</th><th>й</th></tr>
+<tr><td>ai</td><td>ei</td><td>oi</td><td>yi</td><td>wi</td><td>ii</td><td>ix</td></tr>
+</tbody></table>
+</div>
+</center>	
+	
+</body>
+</html>
